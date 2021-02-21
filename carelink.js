@@ -31,13 +31,13 @@ var Client = exports.Client = function (options) {
 
   var CARELINKEU_LOGIN_URL = 'https://' + carelinkServerAddress + '/patient/sso/login?country=us&lang=en';
   var CARELINKEU_REFRESH_TOKEN_URL = 'https://' + carelinkServerAddress + '/patient/sso/reauth';
-  var CARELINKEU_JSON_BASE_URL = 'https://' + carelinkServerAddress + 'https://' + carelinkServerAddress + '/patient/connect/data?cpSerialNumber=NONE&msgType=last24hours&requestTime=';
+  var CARELINKEU_JSON_BASE_URL = 'https://' + carelinkServerAddress + '/patient/countries/settings?countryCode=us&language=en?cpSerialNumber=NONE&msgType=last24hours&requestTime=';
   var CARELINKEU_TOKEN_COOKIE = 'auth_tmp_token';
   var CARELINKEU_TOKENEXPIRE_COOKIE = 'c_token_valid_to';
 
   var CARELINK_SECURITY_URL = 'https://' + carelinkServerAddress + '/patient/j_security_check';
   var CARELINK_AFTER_LOGIN_URL = 'https://' + carelinkServerAddress + '/patient/main/login.do';
-  var CARELINK_JSON_BASE_URL = 'https://' + carelinkServerAddress + '/patient/connect/ConnectViewerServlet?cpSerialNumber=NONE&msgType=last24hours&requestTime=';
+  var CARELINK_JSON_BASE_URL = 'https://' + carelinkServerAddress + '/patient/countries/settings?countryCode=us&language=en?cpSerialNumber=NONE&msgType=last24hours&requestTime=';
   var CARELINK_LOGIN_COOKIE = '_WL_AUTHCOOKIE_JSESSIONID';
   var user_agent_string = [software.name, software.version, software.bugs.url].join(' // ');
 
