@@ -39,7 +39,7 @@ var CARELINK_TREND_TO_NIGHTSCOUT_TREND = {
 };
 
 function parsePumpTime(pumpTimeString, offset, medicalDeviceFamily) {
-  if (process.env['MMCONNECT_SERVER'] === 'EU' || medicalDeviceFamily === 'GUARDIAN') {
+  if (process.env['MMCONNECT_SERVER'] === 'US' || medicalDeviceFamily === 'GUARDIAN') {
     return Date.parse(pumpTimeString);
   } else {
     return Date.parse(pumpTimeString + ' ' + offset);
