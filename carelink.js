@@ -203,7 +203,7 @@ var Client = exports.Client = function (options) {
         logger.log(`EU login 5 (url: ${response.headers.location})`);
         await axiosInstance.get(response.headers.location, {maxRedirects: 0});
 
-        removeCookie('carelink.minimed.eu', '/', 'codeVerifier')
+        removeCookie('carelink.minimed.com', '/', 'codeVerifier')
 
         axiosInstance.defaults.headers.common = {
             'Authorization': `Bearer ${_.get(getCookie(CARELINKEU_TOKEN_COOKIE), 'value', '')}`,
